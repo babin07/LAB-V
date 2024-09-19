@@ -1,0 +1,2 @@
+ques2:->This program initializes the first combination and continuously generates the next combination until all combinations are exhausted. Adjust n and r as needed for different sets and sizes.
+ques3:-> Fermat’s Little Theorem can give false positives for some composite numbers known as Carmichael numbers. For critical applications, consider using more robust primality tests like the Miller-Rabin test.
