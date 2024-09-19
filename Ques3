@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+bool isPrime(int n, int k) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    
+    for (int i = 0; i < k; i++) {
+        int a = 2 + rand() % (n - 4); // Random base between 2 and n-2
+        if (pow(a, n - 1) != 1) {
+            return false; // n is composite
+        }
+    }
+    return true; // n is probably prime
+}
+
+int main() {
+    int number, iterations;
+    cout << "Enter a number to check if it's prime: ";
+    cin >> number;
+    cout << "Enter the number of iterations for accuracy: ";
+    cin >> iterations;
+
+    if (isPrime(number, iterations)) {
+        cout << number << " is probably prime." << endl;
+    } else {
+        cout << number << " is composite." << endl;
+    }
+
+    return 0;
+}
